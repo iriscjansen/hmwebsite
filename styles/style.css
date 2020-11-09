@@ -1,0 +1,671 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,700;1,200;1,400&display=swap');
+
+/*CSS voor de hele body*/
+body {
+	background-color: white;
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+	text-align: center;
+	margin:0;
+}
+
+/*Text*/
+/*Onzichtbare heading h1*/
+h1 {
+	position: absolute;
+	left: -10000em;
+}
+
+h2 {
+	font-size: 1.25em;
+	line-height: 1.5em;
+	white-space: nowrap;
+}
+
+h3 {
+	font-size: 1em;
+	line-height: 1.06em;
+	text-align: center;
+}
+
+h4 {
+	font-size: 1.25em;
+	line-height: 1.5em;
+	color: black;
+	white-space: nowrap;
+	font-weight: bold;
+}
+
+p {
+	font-family: 'Montserrat', sans-serif;
+}
+
+/*Header*/
+body > header {
+	  width: 100%;    
+	  position: sticky;    
+	  z-index: 1000;    
+	  top: 0;    
+	  background-color: #fff;
+}
+
+header>p {
+	font-size: 0.6875em;
+	line-height: 1.125em;
+	text-align: center;
+}
+
+header>nav ul li img {
+	width: 1.5em;
+}
+
+header>nav ul {
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+	padding: 0;
+}
+
+header> nav > ul:nth-of-type(3){
+	align-items:center;
+} 
+
+
+header>nav {
+	display: flex;
+	justify-content: space-between;
+	align-items:center;
+}
+
+header>nav ul li {
+	margin-right: 1em;
+}
+
+/*Navigatie & Hamburgermenu*/
+
+nav {
+	padding: .4em;
+}
+
+nav a {
+	color:black;
+	list-style: none;
+	text-decoration: none;
+	font-size:1.0625em;
+	font-weight:normal;
+}
+
+nav a:active {
+	color:red;
+}
+
+.toonHamburger nav ul:first-of-type {
+	left: 0;
+	opacity: 1;
+}
+
+nav ul:first-of-type {
+	opacity: 0;
+	box-shadow: 0px 0px 1px 5000px rgba(0, 0, 0, 0.8);
+	left: -100%;
+	position: absolute;
+	/* display: flex; */
+	flex-direction: column;
+	height: 100vh;
+	background-color: white;
+	width: 70vw;
+	margin: 0;
+	top: 0;
+
+	justify-content: flex-start;
+	align-items: flex-start;
+	padding:0;
+	z-index: 100;
+
+	transition: all 0.3s ease-out;
+} 
+
+.toonHamburger .closeHamburger {
+	width: 100vw;
+	height: 100vh;
+	/*z-index: 1000; als deze aanstaat doen de links het niet*/
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-repeat: no-repeat;
+	background-position: right 1em center;
+	background-image: url('../images/close.png');
+}
+
+/*Inlogbalk in hamburger*/
+nav ul:first-of-type li:first-of-type {
+	background-color: #f0ddd7;
+	margin:0;
+	padding: 1.5em;
+	width:100%;
+	text-align: left;
+	box-sizing: border-box;
+}
+
+
+nav ul:first-of-type li:first-of-type a img{
+	padding-right: 1em;
+	width:7%;
+}
+
+nav ul:first-of-type li:first-of-type a{
+	font-size:0.75em;
+	text-transform:uppercase;
+	display:flex;
+	align-items: center;
+}
+
+/*Tweede deel links in hamburger*/
+nav ul:first-of-type li:nth-of-type(n+9) a{
+	font-size:0.625em;
+}
+
+
+nav ul:first-of-type li{
+	margin:1em;
+}
+
+button {
+	border: none;
+	background-color: white;
+}
+
+
+/*Section 1*/
+/*P en trending tekst*/
+body>section h2 {
+	font-size: 0.9375em;
+	text-align: left;
+	padding-left:1em;
+}
+
+body > section p {
+	font-size:0.7em;
+}
+
+/*images in cirkels*/
+body > section{
+	padding:0 1.1em;
+}
+
+body>section ul {
+	position: relative;
+	display: flex;
+	padding:0;
+	flex-direction: row;
+	overflow: scroll;
+	justify-content: space-between;
+}
+
+body > section ul li {
+	display: block;
+	min-width:25vw;
+	margin-right:1em;
+}
+
+body > section ul li img {
+	border-radius: 50%;
+	width:60%;
+}
+
+
+/*Main*/
+
+section ul li {
+	list-style-type: none;
+}/* elke section krijgt anders een bolletje(lijst)*/
+
+/*Onzichtbare heading h2*/
+main>section>h2 {
+	position: absolute;
+	left: -10000em;
+}
+/*Main section*/
+main>section:nth-of-type(1) {
+	max-width: 90%;
+	margin: auto;
+}
+
+/*positioneren tekst in afbeeldingen*/
+section ul li:first-of-type div,
+main section ul li:nth-of-type(3) div {
+	position: absolute;
+	bottom: 0%;
+	left: 50%;
+	transform: translate(-50%, 0%);
+}
+
+section ul li:first-of-type,
+section ul li:nth-of-type(3) {
+	position: relative;
+}
+
+/*Beide afbeeldingen*/
+main>section ul li img {
+	display: block;
+	width: 100%;
+}
+
+
+main section ul {
+	padding: 0;
+}
+
+/*afbeelding 1*/
+main section ul li:first-of-type h2 {
+	color: white;
+	font-size: 1.25em;
+}
+
+main section>ul li:first-of-type p {
+	font-size: 0.9375em;
+	line-height: 0.875em;
+	color: white;
+	white-space: nowrap;
+	text-align: center;
+}
+
+
+/*blokje met prijs*/
+section ul li div:first-of-type a {
+	display: block;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 0.9375em;
+	text-align: left;
+	position: absolute;
+	left: .5em;
+	bottom: 6em;
+	margin: 1em 1em 2em 1em;
+	padding: 1em;
+	color: white;
+	background-color: rgba(85, 85, 85, .75);
+}
+
+/* Gele blok tekst tussen afbeeldingen in*/
+section p {
+	font-size: 0.625em;
+} /* nodig je vrienden uit..*/
+
+main section ul li:nth-of-type(2) {
+	background-color: #f4eddd;
+	padding: 2em;
+	margin: 1em 0;
+}
+
+
+/*afbeelding 2*/
+main section ul li:nth-of-type(3) h2 {
+	color: white;
+	font-size: 1.125em;
+}
+
+main section>ul li:nth-of-type(3) p {
+	font-size: 0.9375em;
+	line-height: 0.875em;
+	color: white;
+	white-space: nowrap;
+	text-align: center;
+}
+
+
+/*Begin section magazines etc*/
+/*header section*/
+main>section:nth-of-type(2) header {
+	padding-top: 1em;
+}
+
+main>section:nth-of-type(2) header a {
+	display: block;
+	margin: 1em 1em 2em 1em;
+}
+
+/*section articles*/
+main section:nth-of-type(2){
+	background-color: #f4eddd;
+	padding: 1.5em;
+	padding-bottom: 8em;
+}
+
+div article {
+	background-color: white;
+	padding-bottom: 1em;
+}
+
+main>section:nth-of-type(2) div article a {
+	display: block;
+	margin-top: 2em;
+}
+
+main section:last-of-type section div {/*gap tussen de articles*/
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: 1em;
+}
+
+/*afbeeldingen articles*/
+main section:nth-of-type(2) div img {
+	display: block;
+	width: 100%;
+	margin: auto;
+}
+
+/*typografie*/
+article h2 {
+	font-weight: normal;
+	font-size: 0.75em;
+}
+
+article p {
+	font-size: 0.9375em;
+	font-weight: 500;
+}
+
+main section:nth-of-type(2) div a { /*read hm magazine tekst*/
+	text-decoration: underline;
+	font-size: 0.75em;
+}
+
+main section:nth-of-type(2) div article a {
+	text-decoration: none;
+}
+
+/*footer*/
+footer {
+	background-color: #e4e4e4;
+	padding:2em;
+}
+
+footer p {
+	font-size: 0.8125em;
+	display: block;
+	padding: 1em;
+	margin: 0;
+}
+
+footer ul li p:hover {
+	color:red;
+}
+
+footer h2:hover {
+	color:red;
+}
+
+footer ul {
+	list-style: none;
+	text-align: left;
+	margin: 0;
+}
+
+footer ul li a img{
+	max-width:2em;
+  	margin: auto;
+  	display: block;
+  	padding: 1.5em 1em 1em 1em;
+}
+
+footer ul:last-of-type{
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+}
+
+footer a img{
+	width:4em;
+}
+
+footer a{
+	list-style: none;
+}
+
+footer h2,
+a {
+	font-weight: normal;
+	font-size: 0.75em;
+}
+
+/*hover img*/
+img.overlay {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: auto;
+  justify-content: space-around;
+  display: block;
+  transition: .5s ease;
+  opacity: 0;
+}
+
+img.overlay:hover {
+  opacity: 1;
+}
+
+
+/* PRODUCTPAGINA */
+
+/*Text*/
+.productpagina h2{
+	text-align:center;
+	font-size:1.25em;
+	/*padding:;*/
+}
+
+
+/*Main, content onder 'bekijk alle items'*/
+
+/*model product weergave*/
+.productpagina main ul:first-of-type{
+	display: flex;
+    align-items: center;
+    list-style: none;
+    max-width:90%;
+    margin:auto;
+    padding:0;
+}
+ 
+
+
+.productpagina main>ul li:nth-of-type(3) {
+    margin-left: auto;
+}
+ 
+.productpagina main>ul li {
+    margin-right:1em;
+   
+}
+
+.productpagina main>ul li:last-of-type {
+    margin-right:0em;
+}
+
+
+.productpagina main>ul li a img{
+	width: 1.5em;
+
+}
+
+
+.productpagina main ul li a{
+	color:black;
+	text-decoration: none;
+}
+
+/*plaatjes naast elkaar*/
+
+.productpagina main section{
+	display:grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap:1em;
+}
+
+
+/*articles - producten*/
+
+.productpagina section article h2{
+	font-size:0.75em;
+	text-align:left;
+}
+
+.productpagina section article p{
+	font-size:0.625em;
+	text-align:left;
+}
+
+.productpagina section article p:first-of-type{
+	color:#007b5f;
+}
+
+/*tekst consious weg*/
+
+.productpagina section article:nth-of-type(2) p:first-of-type{
+	color:white;
+}
+
+.productpagina section article:nth-of-type(3) p:first-of-type{
+	color:white;
+}
+
+.productpagina section article:nth-of-type(5) p:first-of-type{
+	color:white;
+}
+
+.productpagina section article:nth-of-type(8) p:first-of-type{
+	color:white;
+}
+
+/*positioneren afbeeldingen */
+.productpagina section article a img:first-of-type{
+	display: block;
+	width: 100%;
+}
+
+/*hartje in afbeelding*/
+.productpagina section article {
+	position:relative;
+	overflow:hidden;
+}
+
+.productpagina section article > img {
+	display: block;
+	position: absolute;
+	right: .5em;
+	bottom: 8em;
+}
+
+/*laadbutton*/
+ .productpagina section button{
+ 	grid-column:1 / -1;
+ 	margin:0 auto 2em;
+	padding:1em 3.5em;
+	color:white;
+	background-color:black;
+	font-weight:700;
+ }
+
+
+/*Footer*/
+.productpagina footer h2{
+	font-size:0.75em;
+}
+
+
+/*Breakpoints*/
+
+
+/*groter dan mobiel*/
+@media (min-width:700px){
+	/*hamburger menu weg naar normaal menu*/
+	header nav {
+    flex-wrap: wrap;
+  	}
+  	header nav ul:first-of-type {
+    justify-content: center;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: static;
+    opacity: 1;
+    height: auto;
+    box-shadow: none;
+    order: 3;
+    margin:auto;
+    padding:0;
+  	}
+  	/*logo groot in het midden*/
+  	header nav ul:nth-of-type(2){
+ 	order:2;
+ 	width:100%;
+ 	margin-top:-2em;
+  	}
+  	header nav ul:nth-of-type(2) li:nth-of-type(2){
+ 	width:100%;
+  	}
+  	header nav ul:nth-of-type(2) li a img:last-of-type{
+  	width:6%;
+  	padding:0;
+  	}
+  	header nav ul:nth-of-type(3){
+ 	margin-left: auto
+  	}
+	/*hamburgermenu niet zichtbaar*/
+  	header nav ul:nth-of-type(2) li:nth-of-type(1) {
+    display: none;
+  	}
+  	/*close button hamburgermenu niet zichtbaar*/
+  	header nav ul:first-of-type li:first-of-type,
+  	header nav ul:first-of-type li:last-of-type {
+	display: none;
+	}
+	/*tweede deel links HBmenu niet zichtbaar*/
+	nav ul:first-of-type li:nth-of-type(n+9){
+	display:none;
+	}
+
+	/*afbeeldingen in cirkels weer naast elkaar*/
+	body>section ul li {
+	min-width:auto;
+	overflow:auto;
+	}
+	body>section ul li img{
+	width:100%;
+	}
+	/* articles van magazine naast elkaar*/
+	main section:last-of-type section div{
+	grid-template-columns: 1fr 1fr 1fr;
+	margin:auto;
+	max-width:60%;
+	}
+	main > section:first-of-type{
+	max-width:60%;
+	}
+	main section:nth-of-type(2) div{
+	max-width:60%;
+	}
+	body > section:nth-of-type(1){
+	max-width:60%;
+	margin:auto;	
+	}
+	/*footer*/
+	footer ul{
+	max-width:60%;
+	margin:auto;
+	}
+	footer p{
+	max-width:60%;
+	margin:auto;
+	}
+	/*producten naast elkaar*/
+	.productpagina main section{
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	max-width:80%;
+	}
+	.productpagina main ul:first-of-type{
+	max-width:80%;
+	}
+}
